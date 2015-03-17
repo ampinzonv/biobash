@@ -1,0 +1,10 @@
+function bb_count_fasta_seqs(){
+	if [ -z "$1" ] ; then
+		echo "
+		bb_count_fasta_seqs: Counts the number of fasta sequences in a file.
+		Usage: bb_count_fasta_seqs [INPUT FILE]
+		"
+	fi
+	grep -c '>' $1
+	
+}

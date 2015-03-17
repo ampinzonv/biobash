@@ -1,0 +1,15 @@
+BIOBASH Vb0.1
+Bogotá - Colombia March 17th 2015
+
+The best way to install BB is sourcing it in, for example, your ".bash_profile"
+adding the following line to the file .bash_profle in your home:
+
+source /path/to/biobashvb0.1.sh
+
+By doing this all the BB functions will be available for your use. It is possible that
+the functions won't be able inmediately in the already opened shell. So close your shell 
+and open it again. It should work. Just typing"bb_" (without quotes) and hitting the TAB 
+key will display all the available functions.
+
+If you want BB to be available to all users you can sourced it in a system wide config 
+file (i.e. /etc/profile). Ask your system administrator.

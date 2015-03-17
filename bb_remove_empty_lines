@@ -1,0 +1,10 @@
+function bb_remove_empty_lines(){
+	if [ -z "$1" ] ; then
+		 echo "
+		 bb_remove_empty_lines: removes empty lines from a file.
+		 Usage: bb_remove_empty_lines [INPUT FILE]
+		 "
+	fi
+		sed '/^$/d' $1
+
+}

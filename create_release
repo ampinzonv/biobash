@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#
+# This script puts together all the files to create the "Official" BB release
+# It should be a single file holding all functions.
+#
+
+VERSION="0.1"
+DATE=`date +%Y-%m-%d`
+RELEASEFILE="biobash_v."$VERSION".sh"
+
+#check if file exists and attempt to erase it if.
+
+#concat all files
+cat head.inc *bb_* > $RELEASEFILE
+
+#perform tests

@@ -1,0 +1,13 @@
+function bb_count_residues(){
+	#This function is  called by bb_get_GC_content!!!!!!
+	if [ -z "$1" ] ; then
+		echo "
+		bb_count_residues: counts the number of residues in a file, without taking into account
+		fasta headers.
+		Usage: bb_count_residues [INPUT FILE]
+		"
+	fi
+	# first colum is obtained from result, otherwise an space appears at left.
+	cat $1 | sed -e '/^>/d' | tr -d '\n' | wc -m | awk '{print $1}'
+	
+}
