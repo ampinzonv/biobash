@@ -4,11 +4,12 @@ Bogotá - Colombia March 17th 2015
 
 
 =INFO FOR DEVELOPERS
-This the b0.1 version of BIOBASH (BB), a set of scripts for common tasks in bioinformatics.
-The development behind BB is based of a couple of key ideas:
+This is the b0.1 version of BIOBASH (BB), a set of scripts for common tasks in bioinformatics.
+The development behind BB is based on a couple of key ideas:
 
 1) An script must rely ONLY on BASH and their "core" utils, for example the use of
-AWK or sed is allowed but not the use of PERL or any other scripting language.
+AWK or sed is allowed but not the use of PERL or any other "external" scripting language or tool
+such as EMBOSS (although the idea of having a BASH wrapper for EMBOSS is quite interesting).
 
 2) To be part of BB, an script should be useful in the common, daily bioinformatics practice,
 so things like "lists management", "file conversions/processing" useful in the field
