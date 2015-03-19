@@ -64,6 +64,14 @@ according to the advances or needs of the project (updates, patches etc.)
 10) Last but not least, routines should work on any UNIX machine (yes, including OSX).
 If not, if impossible, please ask for help.
 
+NOTE: 
+Some useful resources to stablish a set of coding rules can be found here:
+https://github.com/progrium/bashstyle
+http://wiki.bash-hackers.org/scripting/obsolete
+ 
+Code that can be migrated:
+https://github.com/sdwfrost/biobash
+
 
 == DIRECTORY STRUCTURE
 
