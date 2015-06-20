@@ -2,6 +2,6 @@
 # COMMON
 #-----------------------------------------------------------------
 bb_create_tmp_file(){
-	F="/tmp/$RANDOM"
+	local F="/tmp/$RANDOM"
 	echo $F
 }

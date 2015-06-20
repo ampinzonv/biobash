@@ -1,7 +1,7 @@
 function bb_remove_fasta_header(){
 	if [ -z "$1" ] ; then
 		echo "
-		bb_remove_fasta_header: removes all lines from a file starting with \">\" character.
+		bb_remove_fasta_header: removes all fasta headers from a multipe o single fasta file. Useful to concatenate a multiple fasta file.
 		If you want to create a list of all fasta headers in a file use: bb_get_fasta_headers.
 		Usage: bb_remove_fasta_headers [INPUT FILE]
 		"

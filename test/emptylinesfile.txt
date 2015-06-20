@@ -1,0 +1,10 @@
+>seqA
+GCGCGCGCG
+
+>seqB
+CGCTCGATGA
+
+
+
+>seqC
+AGCTAGCTACGATCAGC
