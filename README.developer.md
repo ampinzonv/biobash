@@ -1,9 +1,7 @@
-BIOBASH Vb0.1
+## BIOBASH Vb0.1
 Bogotá - Colombia Octubre 4 2020
-	
 
-
-=INFO FOR DEVELOPERS
+## INFO FOR DEVELOPERS
 This is the b0.1 version of BIOBASH (BB), a set of scripts for common tasks in bioinformatics.
 The development behind BB is based on a couple of key ideas:
 
@@ -95,7 +93,3 @@ ampinzonv@unal.edu.co
 
 Other main developers ;)
 -- YOUR NAME HERE --
-
-
-
-
