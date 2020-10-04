@@ -8,26 +8,28 @@ Therefore, the scripts cover different tasks that are not necessarily "bioinform
 but "bioinformatics-related" tasks, such as data manipulation, data filtering and organization etc.
 
 This project started as a weekend exercises in 2015 and then was kind of abandoned for several years (although the scripts developed
-have shown to be useful during this years also!!!) and now we are re-taking this project and see how far it goes.
+have shown to be useful during thiese years also!!!) and now we are re-taking this project and seeing how far it goes.
 
 As for this release there are 10 functions (scripts) in the following categories:
 
 
 ### FASTA ANALYSIS AND MANIPULATION
-bb_count_fasta_seqs
-bb_extract_fasta_entry
-bb_get_fasta_headers
-bb_remove_fasta_header
-bb_count_residues
-bb_get_GC_content
+* bb_count_fasta_seqs
+* bb_extract_fasta_entry
+* bb_get_fasta_headers
+* bb_remove_fasta_header
+* bb_count_residues
+* bb_get_GC_content
 
 ### LISTS AND GENERAL FILE MANIPULATION
-bb_dos2unix
-bb_get_freq_from_list
-bb_get_nr_list
-bb_remove_empty_lines
+* bb_dos2unix
+* bb_get_freq_from_list
+* bb_get_nr_list
+* bb_remove_empty_lines
 
-	
+By default calling any script without arguments will show help menu.
+
+### INSTALLATION
 
 
 
