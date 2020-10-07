@@ -39,14 +39,14 @@ are in any case better than:
 Try to use keywords that reflect what the function does, the use of "get", "extract" and "display"
 in the names of the functions are higly encouraged.
 
-5)BB will be distributed as a single text file, for this, after frozing a version a simple script
+5) BB will be distributed as a single text file, for this, after frozing a version a simple script
 that concatenates all functions and test them will be used. Take into account that sometimes
 you will call another bb function inside your function, it is ok, but for the final release
 there must be a single function for each file. This file should be named exactly as the function, so
 if your function is called bb_get_NCBI_ids_from_fasta, your file should be named the same, with no
 extension and without the "#!/bin/bash" row.
 
-6)By default, any call to a function without arguments will display the help. Please refer to
+6) By default, any call to a function without arguments will display the help. Please refer to
 the already written functions for examples.
 
 7) There is an special file call "bb_common" which will hold common routines to
@@ -59,8 +59,8 @@ in doubt it is _always_ better to comment the code that not to.
 9) Release: the official release will be created and liberated by the main developer
 according to the advances or needs of the project (updates, patches etc.)
 
-10) Last but not least, routines should work on any UNIX machine (yes, including OSX).
-If not, if impossible, please ask for help.
+10) Last but not least, routines should work on any UNIX based machine (yes, including OSX).
+If not, if impossible, please ask for help o please make it clear for the final user somehow.
 
 NOTE: 
 Some useful resources to stablish a set of coding rules can be found here:
@@ -71,17 +71,17 @@ Code that can be migrated:
 https://github.com/sdwfrost/biobash
 
 
-== DIRECTORY STRUCTURE
+## DIRECTORY STRUCTURE
 
-INSTALL --> installation instructions, for final users.
-README  --> this file.
-bb_*    --> functions.
-biobash_vXX.sh --> is the release file to be distributed to final users.
-head.inc --> header file to be included in the release.
-create_release --> script that creates and tests the release.
+* INSTALL --> installation instructions, for final users.
+* README  --> this file.
+* bb_*    --> functions.
+* biobash_vXX.sh --> is the release file to be distributed to final users.
+* head.inc --> header file to be included in the release.
+* create_release --> script that creates and tests the release.
 
 
-== DEVELOPERS
+## DEVELOPERS
 
 Main Developer:
 Andres Pinzon Ph.D.

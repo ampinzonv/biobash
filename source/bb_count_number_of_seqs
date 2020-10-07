@@ -1,0 +1,29 @@
+function bb_count_fasta_seqs(){
+	if [ -z "$1" ] ; then
+		echo "
+		MODIFIED
+		bb_count_fasta_seqs: Counts the number of fasta sequences in a file.
+		Usage: bb_count_fasta_seqs [INPUT FILE]
+		"			
+	fi
+
+
+	if [ "${1##*.}" = "fasta" ] || [ "${1##*.}" = "fa" ]; then
+
+	   grep -c '>' $1
+
+    fi
+
+	if [ "${1##*.}" = "fastq" ] || [ "${1##*.}" = "fq" ]; then
+
+	   x=$(grep -c '>' $1) 
+	   echo $x/4 | bc -l
+	  
+    else
+		echo "ERROR: Unable to process input file."
+		echo "It seems your file is not fasta (.fasta, .fa) or fastq (.fastq, .fq) file."
+	fi
+
+	
+	
+}
