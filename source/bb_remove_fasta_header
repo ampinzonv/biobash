@@ -1,4 +1,3 @@
-function bb_remove_fasta_header(){
 	if [ -z "$1" ] ; then
 		echo "
 		bb_remove_fasta_header: removes all fasta headers from a multipe o single fasta file. Useful to concatenate a multiple fasta file.
@@ -8,4 +7,3 @@ function bb_remove_fasta_header(){
 	fi
 		sed '/>/d' $1
 
-}

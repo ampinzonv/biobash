@@ -1,0 +1,18 @@
+#!/bin/bash
+
+installDir="/usr/local/bin"
+
+
+echo "
+
+#
+ INSTALLING BIOBASH
+
+ This installation will copy all BIOBASH scripts in: $installDir
+#
+
+"
+
+
+cp *bb_* $installDir
+

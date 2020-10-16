@@ -1,4 +1,3 @@
-function bb_get_nr_list(){
 	if [ -z "$1" ] ; then
 		echo "
 		bb_get_nr_list: Given a one colum file with a  list of items, this function outputs a
@@ -18,4 +17,3 @@ function bb_get_nr_list(){
 	uniq -d $FILEA > $FILEC
 	cat $FILEB $FILEC | sort
 	
-}

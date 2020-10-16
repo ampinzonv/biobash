@@ -1,0 +1,2 @@
+F="/tmp/$RANDOM"
+echo $F

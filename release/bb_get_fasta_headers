@@ -1,0 +1,12 @@
+#!/bin/bash
+# BIOBASH v0.1
+#
+# Released on: 2020-10-16
+	if [ -z "$1" ] ; then
+		echo "
+		bb_get_fasta_headers: ouputs a list of all fasta headers in a file.
+		Usage: bb_get_fasta_headers [INPUT FILE]
+		"
+	fi
+	grep '>' $1  | sed -e 's/>//'
+	

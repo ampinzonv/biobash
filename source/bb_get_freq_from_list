@@ -1,4 +1,3 @@
-function bb_get_freq_from_list(){
 	if [ -z "$1" ] ; then
 		echo "
 		bb_get_freq_from_list: given a one column list of items, this function outputs
@@ -28,4 +27,3 @@ function bb_get_freq_from_list(){
 	done < $FILE
 	sort -gr $FILE2 #gr numerical sort in reverse order.
 
-}

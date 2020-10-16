@@ -1,5 +1,4 @@
 #Comments: this can be helpful,Extracts from line 5 to 10 in input.txt file: sed -n '5,10 p' input.txt
-function bb_extract_fasta_entry() {
 	
 	
 	if [ -z "$2" ] ; then
@@ -43,4 +42,3 @@ function bb_extract_fasta_entry() {
 	 		exit
 	 	fi
 	done 
-}

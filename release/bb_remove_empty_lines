@@ -1,0 +1,12 @@
+#!/bin/bash
+# BIOBASH v0.1
+#
+# Released on: 2020-10-16
+	if [ -z "$1" ] ; then
+		 echo "
+		 bb_remove_empty_lines: removes empty lines from a file.
+		 Usage: bb_remove_empty_lines [INPUT FILE]
+		 "
+	fi
+		sed '/^$/d' $1
+

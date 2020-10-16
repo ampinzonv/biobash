@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 # This script puts together all the files to create the "Official" BB release
 # It should be a single file holding all functions.
@@ -9,9 +8,26 @@ VERSION="0.1"
 DATE=`date +%Y-%m-%d`
 RELEASEFILE="biobash_v."$VERSION".sh"
 
-#check if file exists and attempt to erase it if.
+#concatenate  all files
 
-#concat all files
-cat head.inc *bb_* > $RELEASEFILE
+echo -en "#!/bin/bash
+# BIOBASH v$VERSION
+#
+# Released on: $DATE
+" > version.inc
+
+#Put header to all scripts
+for i in $(ls *bb_*);do cat version.inc  $i > RL_$i;done
+
+#cleaning up!
+rm version.inc 
 
 #perform tests
+
+#move release
+rm ../release/*
+mv *RL_* ../release/
+rename 's/RL_//' ../release/*
+cp installbiobash ../release/
+chmod +x ../release/*
+cp INSTALL LICENSE README.md ../release/
