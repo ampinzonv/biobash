@@ -1,18 +1,62 @@
 #!/bin/bash
 
-installDir="/usr/local/bin"
+default="/usr/local/bin"
 
 
 echo "
 
 #
- INSTALLING BIOBASH
-
- This installation will copy all BIOBASH scripts in: $installDir
+            BIOBASH INSTALLATION
+Bioinformatics and Systems Biology Laboratory
+            Institute for Genetics
+        National University of Colombia
 #
+
 
 "
 
+failure=" == WARNING! Unable to install BIOBASH =="
 
-cp *bb_* $installDir
+echo "By defaut all BIOBASH scripts will be installed in: $default"
+echo "If you want me to change that directory please write the path below, 
+if not just hit enter to use default directory:"
+
+read dir
+
+if [ -z "$dir" ]; then
+
+    installDir=$default
+else
+    installDir=$dir
+fi
+
+# Does it exist?
+if [ -d "$installDir" ];then
+    
+    # Is it writable?
+    if [ -w "$installDir" ];then
+        
+        echo "Installing to: $installDir"
+        cp *bb_* $installDir
+        echo "Installation complete. Thank you for installing BIOBASH
+        
+        "
+    else
+
+    
+    echo $failure
+    echo " "
+    echo "$installDir is not writable.Please make sure you have write access."
+    echo "  "
+
+    fi
+
+    
+else
+    echo $failure
+    echo "  "
+    echo "  The directory you just typed ($installDir) does not exist."
+    echo "  Please make sure route is correct"
+    echo " "
+fi
 
