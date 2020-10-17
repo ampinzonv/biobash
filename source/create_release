@@ -16,7 +16,8 @@ echo -en "#!/bin/bash
 # Released on: $DATE
 " > version.inc
 
-#Put header to all scripts
+#Put header to all scripts and rename new files, so
+# we move Release Files, not source files.
 for i in $(ls *bb_*);do cat version.inc  $i > RL_$i;done
 
 #cleaning up!
@@ -25,9 +26,9 @@ rm version.inc
 #perform tests
 
 #move release
-rm ../release/*
+rm ../release/*bb_*
+
+# Necessary so we do not erase source files
 mv *RL_* ../release/
 rename 's/RL_//' ../release/*
-cp installbiobash ../release/
-chmod +x ../release/*
-cp INSTALL LICENSE README.md ../release/
+chmod +x ../release/*bb_*
