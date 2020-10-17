@@ -1,4 +1,6 @@
+#!/bin/bash
 #Comments: this can be helpful,Extracts from line 5 to 10 in input.txt file: sed -n '5,10 p' input.txt
+	
 	
 	
 	if [ -z "$2" ] ; then

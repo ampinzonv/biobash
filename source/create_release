@@ -1,7 +1,6 @@
 #!/bin/bash
 #
-# This script puts together all the files to create the "Official" BB release
-# It should be a single file holding all functions.
+# Puts together all the files to create the "Official" BB release
 #
 
 VERSION="0.1"
@@ -11,9 +10,14 @@ RELEASEFILE="biobash_v."$VERSION".sh"
 #concatenate  all files
 
 echo -en "#!/bin/bash
-# BIOBASH v$VERSION
+#
+#                 BIOBASH v$VERSION
+# Bioinformatics and Systems Biology Laboratory
+# Institute for Genetics - National University of Colombia
+# https://gibbslab.github.io/
 #
 # Released on: $DATE
+#
 " > version.inc
 
 #Put header to all scripts and rename new files, so

@@ -1,3 +1,4 @@
+#!/bin/bash
 #Usually this function would remove all windows characters from end of line...
 #not sure about it, maybe get it out or create a more robust one.
 	
