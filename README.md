@@ -9,7 +9,7 @@ but "bioinformatics-related" tasks, such as data manipulation, data filtering an
 This project started as a weekend exercises in 2015 and then was kind of abandoned for several years (although the scripts developed
 have shown to be useful during these years also!!!) and now we are re-taking this project and seeing how far it goes.
 
-As for this release there are 10 routines  in the following categories:
+As for this release there are these routines:
 
 
 ### FASTA ANALYSIS AND MANIPULATION

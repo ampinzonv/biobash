@@ -1,8 +1,8 @@
 BIOBASH INSTALLATION INSTRUCTIONS
 
-Just run the "installbiobash" script.
+Just run the "installbiobash" script and follow the instructions.
 By default it attempts to install the scripts in: /usr/local/bin
 so you will need privileges to write in that path.
-As for this version if you want to change the install script please
-modify the corresponding line in the script.
 
+UNINSTALL BIOBASH
+Just run the bb_uninstall_biobash script and follow the instructions.
