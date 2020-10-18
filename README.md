@@ -37,11 +37,7 @@ In order to avoid any conflict between BB scripts and other tools installed
 in your systems, all scripts in BB begin with the "bb_" prefix, so if you
 want to know whcih BB scripts are installed in your system just type "bb_" in your shell
 and hit  the "<TAB>" key.
-Unistalling BB is quite easy. Simply, the installation script copies all BB
-scripts in the provided directory during installation. To uninstall it all you
-have to do is to remove all files with the "bb_" prefix located in that folder.
-Maybe in a next release we will provide an "Uninstall" script.
-
+To uninstall BB, just run the command: bb_uninstall_biobash
 
 
 
