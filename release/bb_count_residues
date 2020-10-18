@@ -1,7 +1,12 @@
 #!/bin/bash
-# BIOBASH v0.1
 #
-# Released on: 2020-10-16
+#                 BIOBASH v0.1
+# Bioinformatics and Systems Biology Laboratory
+# Institute for Genetics - National University of Colombia
+# https://gibbslab.github.io/
+#
+# Released on: 2020-10-17
+#
 #!/bin/bash
         #This script is  called by bb_get_GC_content!!!!!!
 	if [ -z "$1" ] ; then
