@@ -29,10 +29,11 @@ rm version.inc
 
 #perform tests
 
-#move release
+#Delete all previous release files.
 rm ../release/*bb_*
 
 # Necessary so we do not erase source files
 mv *RL_* ../release/
+#Rename again files so they do not contain the RL_
 rename 's/RL_//' ../release/*
 chmod +x ../release/*bb_*

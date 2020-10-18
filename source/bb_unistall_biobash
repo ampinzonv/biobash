@@ -13,9 +13,9 @@ for i in $(ls $bbdir/*bb_*);do
 done
 
 echo ""
-echo "Do you want me to unistall these tools (yes/no)?:"
+read -p  "Do you want me to unistall these tools (yes/no)?: " var
 echo ""
-read var
+
 
 #Translate everything uppercase to lowercase
 continue=$(echo $var | tr '[:upper:]' '[:lower:]')
@@ -35,7 +35,8 @@ if [ $continue = "yes" ];then
 fi
 
 if [ $continue = "no" ];then
-    echo "Nothing done"
+    echo "Nothing done. Good bye."
+    echo ""
 else
     echo "Please answer Yes or No."
     echo "Nothing done. Leaving."

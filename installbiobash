@@ -17,11 +17,9 @@ Bioinformatics and Systems Biology Laboratory
 
 failure=" == WARNING! Unable to install BIOBASH =="
 
-echo "By defaut all BIOBASH scripts will be installed in: $default"
-echo "If you want me to change that directory please write the path below, 
-if not just hit enter to use default directory:"
-
-read dir
+echo  "Hit ENTER to use the default installation directory ($default) or provide a
+valid installation path below:"
+read -p " > " dir
 
 if [ -z "$dir" ]; then
 

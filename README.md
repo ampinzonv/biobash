@@ -30,15 +30,20 @@ As for this release there are these routines:
 By default calling any script without arguments will show help menu.
 
 ### INSTALLATION (and UNISTALLATION)
-Just run the "installbiobash" script in the top folder of this release.
-BY default it attempts to install all scripts in /usr/local/bin, but you can
+Just run the "installbiobash" script in the top folder of this release (assuming you are at the root of the biobash folder):
+
+``./installbiobash``
+
+BY default this script attempts to install all scripts in /usr/local/bin, but you can
 change this install directory during the installation process.
 In order to avoid any conflict between BB scripts and other tools installed
 in your systems, all scripts in BB begin with the "bb_" prefix, so if you
 want to know whcih BB scripts are installed in your system just type "bb_" in your shell
-and hit  the "<TAB>" key.
-To uninstall BB, just run the command: bb_uninstall_biobash
+and hit  the "TAB" key.
+To uninstall BB, just run the command: 
 
+``bb_uninstall_biobash``
 
+And follow the instructions.
 
 
