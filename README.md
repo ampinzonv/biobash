@@ -19,6 +19,7 @@ As for this release there are 10 routines  in the following categories:
 * bb_remove_fasta_header
 * bb_count_residues
 * bb_get_GC_content
+* bb_fastq2fasta
 
 ### LISTS AND GENERAL FILE MANIPULATION
 * bb_dos2unix
@@ -28,14 +29,18 @@ As for this release there are 10 routines  in the following categories:
 
 By default calling any script without arguments will show help menu.
 
-### INSTALLATION
+### INSTALLATION (and UNISTALLATION)
 Just run the "installbiobash" script in the top folder of this release.
 BY default it attempts to install all scripts in /usr/local/bin, but you can
 change this install directory during the installation process.
 In order to avoid any conflict between BB scripts and other tools installed
 in your systems, all scripts in BB begin with the "bb_" prefix, so if you
 want to know whcih BB scripts are installed in your system just type "bb_" in your shell
-and hit  the "<TAB>" key. 
+and hit  the "<TAB>" key.
+Unistalling BB is quite easy. Simply, the installation script copies all BB
+scripts in the provided directory during installation. To uninstall it all you
+have to do is to remove all files with the "bb_" prefix located in that folder.
+Maybe in a next release we will provide an "Uninstall" script.
 
 
 

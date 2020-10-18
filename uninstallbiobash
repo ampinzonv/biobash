@@ -1,0 +1,30 @@
+#!/bin/bash
+echo ""
+echo " == BIOBASH UNINSTALLING =="
+echo "This program will uninstall all BIOBASH scripts from your system.
+¿Are you ok with that?: yes/no"
+read var
+
+#Translate everything uppercase to lowercase
+continue=$(echo $var | tr '[:upper:]' '[:lower:]')
+
+if [ $continue = "yes" ];then
+    echo "Erasing"
+    bbf=$(which bb_dos2unix)
+    bbdir=$(dirname $bbf)
+    
+    echo "Unistalling from: $bbdir"
+
+    $bblist=$(ls $bbdir/)
+
+    echo "Are you sure you want to erase the following files: $bblist"
+    exit 0
+fi
+
+if [ $continue = "no" ];then
+    echo "Nothing done"
+else
+    echo "Please answer Yes or No"
+    echo "Nothing done. Leaving"
+    echo ""
+fi
