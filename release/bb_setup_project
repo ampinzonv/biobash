@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+#                 BIOBASH v0.1
+# Bioinformatics and Systems Biology Laboratory
+# Institute for Genetics - National University of Colombia
+# https://gibbslab.github.io/
+#
+# Released on: 2020-10-20
+#
+#!/bin/bash
 # Set ups a template directory structure for a general analysis in Bioinformatics.
 # This structure was based in several forums as well as in the following resources:
 #

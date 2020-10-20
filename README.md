@@ -13,19 +13,20 @@ As for this release there are these routines:
 
 
 ### FASTA ANALYSIS AND MANIPULATION
-* bb_count_seqs
-* bb_extract_fasta_entry
-* bb_get_fasta_headers
-* bb_remove_fasta_header
-* bb_count_residues
-* bb_get_GC_content
-* bb_fastq2fasta
+* bb_count_seqs (Counts the number of sequences in a multiple fastq or fasta file)
+* bb_extract_fasta_entry (Extracts a single sequence from a multiple fasta file)
+* bb_get_fasta_headers (Extracts all fasta headers in a fasta file)
+* bb_remove_fasta_header (Concatenates all files in a multiple fasta file)
+* bb_count_residues (Counts the number of residues in a fasta file)
+* bb_get_GC_content (Determines the %GC in a fasta file)
+* bb_fastq2fasta (Converts a fastq file in a fasta file)
 
 ### LISTS AND GENERAL FILE MANIPULATION
-* bb_dos2unix
-* bb_get_freq_from_list
-* bb_get_nr_list
-* bb_remove_empty_lines
+* bb_dos2unix (Removes non UNIX characters from a file)
+* bb_get_freq_from_list (Obtains the frequency of every item in a list of items)
+* bb_get_nr_list (Obtains a non redundant list from a redundant list of items)
+* bb_remove_empty_lines (Removes empty lines from any file)
+* bb_setup_project (Creates a directory structure for bioinformatics analysis)
 
 By default calling any script without arguments will show help menu.
 
