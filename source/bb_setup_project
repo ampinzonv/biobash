@@ -1,0 +1,105 @@
+#!/bin/bash
+# Set ups a template directory structure for a general analysis in Bioinformatics.
+# This structure was based in several forums as well as in the following resources:
+#
+# https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1000424
+# https://bioinformatics-core-shared-training.github.io/shell-genomics/07-organization/index.html
+#
+# Basically it was created witht he following idea in mind:
+# "Someone unfamiliar with your project should be able to look at your computer files 
+# and understand in detail what you did and why" (Noble, 2009).
+#
+#YYMMDD_PROJECTNAME/
+#ABOUT.txt  -->general info about the project(collab. emails, abstract, date started, deadlines etc).
+#NOTEBOOK.md -->(Title PROJECTNAME, and dated entries)
+#sandbox/ --> test "something" before applying it to data.
+#raw_data/ -->data here is NOT writable.
+#analysis/
+#  ...|_01_QC/
+#  ...|_02_cleaning/
+ # ...|_03_Alignment
+#  ...|_04_Assembly
+#  ...|_05_Annotation 
+#tmp/
+#tools/ -->specific project software and scripts
+#  ...|_soft
+#  ...|_scripts/ -->conectado a github
+#docs/
+#results/
+#manuscript/
+
+#Shall we have a README in each folder?!!!!!
+
+
+
+if [ -z "$1" ] ; then
+	echo "
+	bb_project_setup: Set ups a template directory structure for general
+    analysis in Bioinformatics.
+	Usage: bb_project_setup [PROJECT_NAME]
+    Note that spaces are not allowed in: PROJECT_NAME 
+	"
+    exit 0
+fi
+
+
+#create project's root directory it will be in the form:
+# 20201024_MyProjectName
+actualDate=$(date)
+mydate=$(date +"%Y%m%d")
+rootDir=$(echo "$mydate-$1")
+
+mkdir $rootDir
+cd $rootDir
+touch notebook.txt
+echo "
+===========================================================
+                       PROJECT'S NOTEBOOK
+===========================================================
+
+This is a template for project notebook. The idea is to register
+all commands and related info, everything should dated.
+
+$actualDate: Initial steps
+------------------------------
+Copied files from NCBI to raw data directory
+
+
+$actualDate: General quality analysis
+------------------------------
+Performed a simple Fastqc analysis over raw data. Everything was saved to Analysis folder.
+The command was:
+fastqc raw_data/*fq
+" >> notebook.txt
+
+touch about.txt
+echo "
+===========================================================
+                       ABOUT THIS PROJECT
+===========================================================
+
+* Project started on: $actualDate
+
+== GENERAL OBJECTIVE
+
+== COLABORATORS
+
+== RELATED INFO
+" >> about.txt
+
+mkdir sandbox raw_data tmp tools docs results manuscript analysis
+
+cd ./analysis
+mkdir 01 02 03 04
+cd ../tools
+mkdir soft scripts
+cd ..
+
+echo "
+=== DONE!==
+Environment created. REMEMBER that raw_data directory permissions
+should be set like: chmod -R -w raw_data, to prevent erasing raw data.
+Good bye.
+===========
+
+"
