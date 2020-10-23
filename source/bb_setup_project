@@ -13,7 +13,10 @@
 #ABOUT.txt  -->general info about the project(collab. emails, abstract, date started, deadlines etc).
 #NOTEBOOK.md -->(Title PROJECTNAME, and dated entries)
 #sandbox/ --> test "something" before applying it to data.
-#raw_data/ -->data here is NOT writable.
+#
+#data
+# ... |_raw_data/ -->data here is NOT writable.
+# ... |_other_data --> other input data that is not raw (tables or other info).
 #analysis/
 #  ...|_01_QC/
 #  ...|_02_cleaning/
@@ -28,7 +31,6 @@
 #results/
 #manuscript/
 
-#Shall we have a README in each folder?!!!!!
 
 
 
@@ -65,50 +67,82 @@ fi
 
 mkdir $rootDir
 cd $rootDir
-touch notebook.txt
+
+
+#
+#Create notebook file.
+#
+touch notebook.md
 echo "
-===========================================================
-                       PROJECT'S NOTEBOOK
-===========================================================
+ #                      PROJECT'S NOTEBOOK
 
 This is a template for project notebook. The idea is to register
 all commands and related info, everything should dated.
 
-$actualDate: Initial steps
+##$actualDate: Initial steps
 ------------------------------
 Copied files from NCBI to raw data directory
 
 
-$actualDate: General quality analysis
+##$actualDate: General quality analysis
 ------------------------------
-Performed a simple Fastqc analysis over raw data. Everything was saved to Analysis folder.
+Performed a simple *Fastqc analysis* over raw data. Everything was saved to Analysis folder.
 The command was:
-fastqc raw_data/*fq
-" >> notebook.txt
+> fastqc raw_data/*fq
+" >> notebook.md
 
-touch about.txt
+
+#
+#Create about file.
+#
+touch about.md
 echo "
-===========================================================
-                       ABOUT THIS PROJECT
-===========================================================
+#                      ABOUT THIS PROJECT
 
 * Project started on: $actualDate
 
-== GENERAL OBJECTIVE
+## GENERAL OBJECTIVE
 
-== COLABORATORS
+## COLABORATORS
 
-== RELATED INFO
-" >> about.txt
+## RELATED INFO
+" >> about.md
 
-mkdir sandbox raw_data tmp tools docs results manuscript analysis
+#
+# Create README template
+#
+echo "
+# README                
 
+## $actualDate
+First files copied here
+
+## $actualDate
+Other important info related to this particular folder
+" > README.tpt
+
+#
+# Create directories and README files.
+# Seems not, but it is very useful to have a single README in each directory.
+#
+mkdir sandbox data tmp tools docs results manuscript analysis
+cp README.tpt sandbox/README.sandbox.md
+cp README.tpt data/README.data.md
+cp README.tpt analysis/README.analysis.md
+cp README.tpt tools/README.tools.md
+cp README.tpt tmp/README.tmp.md
+cp README.tpt docs/README.docs.md
+cp README.tpt results/README.results.md
+
+rm README.tpt
+
+#Create sub-directories
 cd ./analysis
 mkdir 01 02 03 04
 cd ../tools
 mkdir soft scripts
-cd ..
-
+cd ../data
+mkdir raw_data other_data
 echo "
 === DONE!==
 Environment created. REMEMBER that raw_data directory permissions
