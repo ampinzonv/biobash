@@ -5,7 +5,7 @@
 # Institute for Genetics - National University of Colombia
 # https://gibbslab.github.io/
 #
-# Released on: 2020-10-23
+# Released on: 2020-10-28
 #
 #!/bin/bash
 
@@ -24,7 +24,7 @@ fi
 if [ "${1##*.}" = "fasta" ] || [ "${1##*.}" = "fa" ]; then
 
 	   grep -c '>' $1
-
+          exit 0
 fi
 
 if [ "${1##*.}" = "fastq" ] || [ "${1##*.}" = "fq" ]; then
@@ -32,6 +32,7 @@ if [ "${1##*.}" = "fastq" ] || [ "${1##*.}" = "fq" ]; then
 	   x=$(wc -l $1 | awk '{ print $1 }') 
            var3=$(bc <<< "$x / 4")
            echo $var3
+           exit 0
 else
 		echo "ERROR: Unable to process input file."
 		echo "It seems your file is not fasta (.fasta, .fa) or fastq (.fastq, .fq) file."
