@@ -1,4 +1,5 @@
 #!/bin/bash
+# Script taken from: https://github.com/sdwfrost/biobash
 
 if [ -z "$1" ] ; then
     echo "
