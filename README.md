@@ -12,7 +12,7 @@ have shown to be useful during these years!!!).
 As for this release there are these routines:
 
 
-### FASTA ANALYSIS AND MANIPULATION
+### FASTA/FASTQ ANALYSIS AND MANIPULATION
 * bb_count_seqs (Counts the number of sequences in a multiple fastq or fasta file)
 * bb_extract_fasta_entry (Extracts a single sequence from a multiple fasta file)
 * bb_get_fasta_headers (Extracts all fasta headers in a fasta file)
@@ -20,6 +20,7 @@ As for this release there are these routines:
 * bb_count_residues (Counts the number of residues in a fasta file)
 * bb_get_GC_content (Determines the %GC in a fasta file)
 * bb_fastq2fasta (Converts a fastq file in a fasta file)
+* bb_rename_fasta_entries (Sequentially renames all fasta entries in a multiple fasta file)
 
 ### LISTS AND GENERAL FILE MANIPULATION
 * bb_dos2unix (Removes non UNIX characters from a file)
@@ -28,7 +29,7 @@ As for this release there are these routines:
 * bb_remove_empty_lines (Removes empty lines from any file)
 * bb_setup_project (Creates a directory structure for bioinformatics analysis)
 
-By default calling any script without arguments will show help menu.
+By default calling any script without arguments will show a help menu.
 
 ### INSTALLATION (and UNISTALLATION)
 Just run the "installbiobash" script in the top folder of this release (assuming you are at the root of the biobash folder):
