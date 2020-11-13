@@ -1,0 +1,15 @@
+#!/bin/bash
+# Script taken from: https://github.com/sdwfrost/biobash
+
+if [ -z "$2" ] ; then
+    echo "
+        Missing argument.
+        bb_rename_seqs: Renames the header of a FASTA file.
+        Usage: bb_rename_seqs [INPUT FILE] [STRING]
+    "
+    exit 0
+fi
+
+awk -v str=$2 '/^>/{print ">" str "_" ++i; next}{print}' < $1
+
+
