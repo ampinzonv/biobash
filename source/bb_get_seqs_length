@@ -1,0 +1,13 @@
+#!/bin/bash
+# Adapted from: https://github.com/sdwfrost/biobash/blob/master/lenseq.sh
+
+if [ -z  "$1" ]; then
+    echo "
+        bb_get_seqs_length: Displays sequences length from a single/multiple fasta file
+    
+    Usage: bb_get_seqs_length [FASTA FILE]
+    "
+    exit
+fi
+
+awk '/^>/ {if (seqlen){print seqlen}; print ;seqlen=0;next; } { seqlen += length($0)}END{print seqlen}' $1
