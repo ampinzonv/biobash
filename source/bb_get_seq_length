@@ -1,5 +1,5 @@
 #!/bin/bash
-# Adapted from: https://github.com/sdwfrost/biobash/blob/master/lenseq.sh
+# Adapted from: https://gist.github.com/danielecook/394958db37c4d01f0ef3
 
 if [ -z  "$1" ]; then
     echo "
@@ -10,4 +10,5 @@ if [ -z  "$1" ]; then
     exit
 fi
 
-awk '/^>/ {if (seqlen){print seqlen}; print ;seqlen=0;next; } { seqlen += length($0)}END{print seqlen}' $1
+awk '$1 ~ ">" {print c; c=0;printf substr($1,2,100) "\t"; } $1 !~ ">" {c+=length($1);} END { print c; }' $1
+
