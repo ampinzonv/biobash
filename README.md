@@ -1,5 +1,16 @@
 ## BIOBASH Vb0.1
 
+============================ WE MOVED! ================================
+
+THE OFFICIAL BIOBASH REPOSITORY WAS FORKED TO https://github.com/gibbslab/biobash
+PLEASE REFER TO THAT REPOSITORY FOR UPDATES AND NEWS. THIS REPOSITORY IS NO LONGER MANTAINED.
+
+THANKS,
+
+=======================================================================
+
+
+
 BIOBASH is a set of BASH scripts useful for common bioinformatics related tasks.
 It was born by our group's necessity on performing simple rutinary tasks while working
 on bioinformatics data analysis.
